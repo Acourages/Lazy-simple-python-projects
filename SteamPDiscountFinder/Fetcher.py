@@ -54,7 +54,6 @@ def fetch(params, tries=3):
     raise SystemExit(1)
 
 
-# ---------- Section 1: normal discounts ----------
 min_discount = ask("Min discount %", 50)
 max_price = ask("Max price $", 20)
 
@@ -76,7 +75,7 @@ for d in deals:
         continue
 
 deals = valid_deals
-deals.sort(key=lambda d: float(d["salePrice"]))   # cheapest first
+deals.sort(key=lambda d: float(d["salePrice"])) 
 
 print("\n=== DISCOUNTS (cheapest first) ===")
 
